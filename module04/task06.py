@@ -1,5 +1,6 @@
 print('Задача 6. Игра в кубики')
 
+# noinspection SpellCheckingInspection
 kostya_dice = int(input('Кубик Кости: '))
 owner_dice = int(input('Кубик владельца: '))
 

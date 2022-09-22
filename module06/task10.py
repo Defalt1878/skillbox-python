@@ -18,6 +18,7 @@ while True:
     elif result == 3:
         right_border = middle
     else:
+        # noinspection SpellCheckingInspection
         print('Ниче не понял.')
 
 print('Твое число', middle)
