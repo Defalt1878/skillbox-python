@@ -17,7 +17,7 @@ def calc_row_sum(x: float, precision: float):
     return result
 
 
-precision = float(input("Введите точность: "))
-x = int(input("Введите икс: "))
+precis = float(input('Введите точность: '))
+x_arg = int(input('Введите икс: '))
 
-print("Сумма ряда =", calc_row_sum(x, precision))
+print('Сумма ряда =', calc_row_sum(x_arg, precis))

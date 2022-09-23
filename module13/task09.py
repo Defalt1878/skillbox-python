@@ -1,21 +1,21 @@
 print('Задача 9. Аннуитетный платёж')
 
 
-def calc_annuity_payment(debt: float, interest_rate: float, years: int):
-    x = (1 + interest_rate) ** years
-    return round(debt * interest_rate * x / (x - 1), 2)
+def calc_annuity_payment(remaining_debt: float, interest: float, total_years: int):
+    x = (1 + interest) ** total_years
+    return round(remaining_debt * interest * x / (x - 1), 2)
 
 
-def calc_print_periods(debt: float, interest_rate: float, annuity_payment: float, periods_count: int):
+def calc_print_periods(remaining_debt, interest, payment, periods_count):
     for period in range(1, periods_count + 1):
         print(f'\nПериод: {period}')
-        print(f'Остаток долга на начало периода: {debt:.2f}')
-        interest_paid = debt * interest_rate
+        print(f'Остаток долга на начало периода: {remaining_debt:.2f}')
+        interest_paid = remaining_debt * interest
         print(f'Выплачено процентов: {interest_paid:.2f}')
-        debt_body_paid = annuity_payment - interest_paid
+        debt_body_paid = payment - interest_paid
         print(f'Выплачено тела кредита: {debt_body_paid:.2f}')
-        debt -= debt_body_paid
-    return debt
+        remaining_debt -= debt_body_paid
+    return remaining_debt
 
 
 debt = float(input('Введите сумму кредита: '))

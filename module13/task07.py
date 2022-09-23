@@ -5,10 +5,10 @@ def get_danger(depth: float):
     return depth ** 3 - 3 * depth ** 2 - 12 * depth + 10
 
 
-def get_depth(min_depth: float, max_depth: float, danger_delta: float):
+def get_depth(min_depth: float, max_depth: float, delta: float):
     depth = (max_depth + min_depth) / 2
     danger = get_danger(depth)
-    while abs(danger) > danger_delta:
+    while abs(danger) > delta:
         if danger > 0:
             min_depth = depth
         else:

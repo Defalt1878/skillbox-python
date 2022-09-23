@@ -16,10 +16,10 @@ def winner_index(first_payer_choice, second_player_choice):
 
 
 def rock_paper_scissors():
-    user_action = input(f"\nСделайте выбор ({', '.join(rock_paper_scissors_choices)}): ").lower()
+    user_action = input(f'\nСделайте выбор ({", ".join(rock_paper_scissors_choices)}): ').lower()
     while not (user_action in rock_paper_scissors_choices):
         print('Ошибка ввода!')
-        user_action = input(f"Сделайте выбор ({', '.join(rock_paper_scissors_choices)}): ").lower()
+        user_action = input(f'Сделайте выбор ({", ".join(rock_paper_scissors_choices)}): ').lower()
 
     computer_action = random.choice(rock_paper_scissors_choices)
 
@@ -34,12 +34,12 @@ def rock_paper_scissors():
             print('Вы проиграли!')
 
 
-def guess_the_number(min: int, max: int):
-    number = random.randint(min, max)
+def guess_the_number(min_num: int, max_num: int):
+    number = random.randint(min_num, max_num)
     trying = 0
 
     while True:
-        print(f'\nЗагадано число от {min} до {max}.')
+        print(f'\nЗагадано число от {min_num} до {max_num}.')
         user_number = int(input(f'Введите ваш вариант числа: '))
         trying += 1
         if user_number > number:
