@@ -2,10 +2,7 @@ print('Задача 10. Симметричная последовательно�
 
 
 def is_palindrome(_list: list):
-    for i in range(0, len(_list) // 2):
-        if _list[i] != _list[-(i + 1)]:
-            return False
-    return True
+    return _list == _list[::-1]
 
 
 def get_missing_sequence(source: list):
