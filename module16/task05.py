@@ -12,7 +12,7 @@ violator_songs = [
     ['Clean', 5.83]
 ]
 
-songs_dict = dict(map(lambda e: (e[0], e[1]), violator_songs))
+songs_dict = {song_info[0]: song_info[1] for song_info in violator_songs}
 
 total_time = 0
 count = int(input('Сколько песен выбрать? '))

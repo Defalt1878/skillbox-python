@@ -26,8 +26,8 @@ store = {
     ],
 }
 
-for good in goods:
-    good_infos = store[goods[good]]
-    total_quantity = sum([info['quantity'] for info in good_infos])
-    total_price = sum([info['quantity'] * info['price'] for info in good_infos])
+for good, code in goods.items():
+    good_info = store[code]
+    total_quantity = sum([info['quantity'] for info in good_info])
+    total_price = sum([info['quantity'] * info['price'] for info in good_info])
     print(f'{good} — кол-во: {total_quantity}, стоимость: {total_price:,} р.')
