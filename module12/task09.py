@@ -16,10 +16,10 @@ def winner_index(first_payer_choice, second_player_choice):
 
 
 def rock_paper_scissors():
-    user_action = input(f'\nСделайте выбор ({', '.join(rock_paper_scissors_choices)}): ').lower()
+    user_action = input(f'\nСделайте выбор ({", ".join(rock_paper_scissors_choices)}): ').lower()
     while not (user_action in rock_paper_scissors_choices):
         print('Ошибка ввода!')
-        user_action = input(f'Сделайте выбор ({', '.join(rock_paper_scissors_choices)}): ').lower()
+        user_action = input(f'Сделайте выбор ({", ".join(rock_paper_scissors_choices)}): ').lower()
 
     computer_action = random.choice(rock_paper_scissors_choices)
 
