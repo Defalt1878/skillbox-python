@@ -10,5 +10,5 @@ info = 'OS info is \n{}\n\nPython version is {} {}'.format(
 )
 print(info)
 
-with open('module1/os_info.txt', 'w', encoding='utf8') as file:
+with open('module01/os_info.txt', 'w', encoding='utf8') as file:
     file.write(info)
