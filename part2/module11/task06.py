@@ -2,7 +2,7 @@ print('Задача 6. Магия')
 
 
 class Element:
-    def name(self):
+    def __str__(self):
         return type(self).__name__
 
     def __add__(self, other):

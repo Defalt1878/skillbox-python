@@ -28,13 +28,13 @@ class CardValue(Enum):
 
 
 class Card:
-    def __init__(self, suit: Suit, value: CardValue):
-        self._suit = suit
-        self._value = value
-        self.score = value.value % 100
+    def __init__(self, suit: Suit, card_value: CardValue):
+        self.__suit = suit
+        self.__card_value = card_value
+        self.score = card_value.value % 100
 
     def __str__(self):
-        return f'{self._value.name} ({self._suit.name})'
+        return f'{self.__card_value.name} ({self.__suit.name})'
 
 
 class Deck:
