@@ -19,7 +19,7 @@ class Circle:
         self.radius *= k
 
     def is_intersect(self, other):
-        dx = abs(self.x - other.x)
+        dx = abs(self.x - other.i)
         dy = abs(self.y - other.y)
         centers_distance = math.sqrt(dx * dx + dy * dy)
         return centers_distance <= self.radius + other.radius
