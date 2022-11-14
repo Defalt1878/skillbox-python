@@ -1,3 +1,5 @@
+from typing import Iterator
+
 print('Задача 1. Квадраты чисел')
 
 
@@ -12,11 +14,11 @@ class NumbersSquares:
             raise StopIteration
         return self.current ** 2
 
-    def __iter__(self) -> iter:
+    def __iter__(self) -> Iterator[int]:
         return self
 
 
-def number_squares(count: int) -> iter:
+def number_squares(count: int) -> Iterator[int]:
     for number in range(1, count + 1):
         yield number ** 2
 

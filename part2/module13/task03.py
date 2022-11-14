@@ -1,9 +1,10 @@
 import os
+from typing import Iterator
 
 print('Задача 3. Пути файлов')
 
 
-def gen_files_path(to_find: str, start: str = os.path.abspath(os.sep)) -> iter:
+def gen_files_path(to_find: str, start: str = os.path.abspath(os.sep)) -> Iterator[str]:
     to_check = [start]
 
     while to_check:
