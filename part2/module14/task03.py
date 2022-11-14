@@ -14,7 +14,7 @@ def logging(func: Callable) -> Callable:
         try:
             return func(*args, **kwargs)
         except Exception as e:
-            message = f'{datetime.now()}: {func.__name__} выбросила исключение: {repr(e)}'
+            message = f'{datetime.utcnow()}: {func.__name__} выбросила исключение: {repr(e)}'
             print(message)
             with open('function_errors.log', 'a', encoding='utf-8') as log:
                 log.write(message + '\n')
