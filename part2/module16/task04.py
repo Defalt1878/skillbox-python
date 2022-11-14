@@ -6,22 +6,22 @@ print('Задача 4. Весь мир — декоратор...')
 
 def decorator_with_args_for_any_decorator(decorator: Callable) -> Callable:
     @functools.wraps(decorator)
-    def args_wrapper(*args, **kwargs) -> Callable:
-        def wrapped_decorator(func: Callable):
+    def decorator_builder(*args, **kwargs) -> Callable:
+        def wrapped_decorator(func: Callable) -> Callable:
             return decorator(func, *args, **kwargs)
 
         return wrapped_decorator
 
-    return args_wrapper
+    return decorator_builder
 
 
 @decorator_with_args_for_any_decorator
-def decorated_decorator(func: Callable, *args, **kwargs) -> Callable:
+def decorated_decorator(func: Callable, *dec_args, **dec_kwargs) -> Callable:
     """Декорированный декоратор"""
 
     @functools.wraps(func)
     def wrapped_func(*func_args, **func_kwargs) -> Callable:
-        print("Переданные арги и кварги в декоратор:", args, kwargs)
+        print("Переданные арги и кварги в декоратор:", dec_args, dec_kwargs)
         return func(*func_args, **func_kwargs)
 
     return wrapped_func
