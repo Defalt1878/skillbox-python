@@ -1,6 +1,6 @@
 from collections import deque
 
-print('Задача 7. Контейнеры')
+print('Задача 8. Бегущие цифры')
 
 
 def shift_elements(source: list, n: int):
